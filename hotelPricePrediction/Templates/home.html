@@ -1,0 +1,48 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HOME</title>
+    <style>
+         h2{
+         margin-top:150px;
+         font-size:40px;
+         }
+         h1{
+         font-size:60px;
+         font-style:courier new;
+         }
+         input[type=submit]{
+         background-color:#000000;
+         color:white;
+         cursor:pointer;
+         padding: 16px 32px;
+         }
+        body{
+        background-image:url("{%static 'hotel9.jpg'%}");
+        background-repeat:no repeat;
+        background-attachment:fixed;
+        background-size:cover;
+
+               }
+    </style>
+</head>
+<body style="text-align:center">
+<h2> Welcome To:</h2>
+<h1> Grand Hotels  Prediction System</h1>
+<form action="predict">
+<input type="submit" value="START" style="margin-right: 400px">
+   </form>
+<form action="login">
+<input type="submit" value="LOGIN" style="margin-right: 150px">
+   </form>
+<form action="register">
+<input type="submit" value="REGISTER" style="margin-left: 186px">
+   </form>
+<form action="explore">
+<input type="submit" value="EXPLORE" style="margin-left: 476px">
+   </form>
+</body>
+</html>

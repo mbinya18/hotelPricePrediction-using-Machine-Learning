@@ -1,0 +1,85 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Predict</title>
+    <meta charset="utf-8">
+    <meta name="viewpoint" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+      .main{
+            position:fixed;
+            top:40px;
+            left:450px;
+            width:700px;
+            background-color:gainsboro;
+            align-items:center;
+            border-radius:3%;
+        }
+        div{
+
+            padding:13px;
+        }
+        input[type=submit]{
+            background-color:Black;
+            color:white;
+            cursor:pointer;
+            padding: 16px 32px;
+        }
+        h1{
+            font-size:40px;
+        }
+        h2{
+            font-size:30px;
+            color:DarkRed;
+        }
+        body{
+        background-image:url("{%static 'hotel17.jpg'%}");
+        background-repeat:no repeat;
+        background-size:cover;
+
+         }
+    </style>
+</head>
+<body style="text-align:center">
+<div class="main">
+    <h1> Fill the following to predict:</h1>
+    <form action="result">
+        <div class="row">
+            <div class="col-sm-4" style="background-color:Bisque;">
+                <p>   Income </p>
+            <input type="text" name="n1">
+        </div>
+        <div class="col-sm-4" style="background-color:DarkSeaGreen;">
+                <p> Duration of stay </p>
+            <input type="text" name="n2">
+        </div>
+            <div class="col-sm-4" style="background-color:LightPink;">
+                <p>  Number of Rooms   </p>
+            <input type="text" name="n3">
+        </div>
+            <div class="col-sm-4" style="background-color:Turquoise;">
+                <p>Location code(between 2 and 6) </p>
+            <input type="text" name="n4">
+        </div>
+            <div class="col-sm-4" style="background-color:RosyBrown;">
+              <p>Avg Population to be hosted</p>
+              <input type="text" name="n5" >
+            </div>
+        </div>
+        <div class="row">
+            <input type="submit" value="PREDICT">
+
+        </div>
+
+            </form>
+    <div class="row">
+        <h2> {{result2}}</h2>
+    </div>
+</div>
+</body>
+</html>
